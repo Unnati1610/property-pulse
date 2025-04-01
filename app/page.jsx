@@ -1,3 +1,14 @@
-export default function Home() {
-  return <div className="text-2xl">HomePage</div>;
-}
+import Hero from "@/components/Hero";
+import InfoBoxes from "@/components/InfoBoxes";
+import HomeProperties from "@/components/HomeProperties";
+const HomePage = () => {
+  return (
+    <>
+      <Hero />
+      <InfoBoxes />
+      <HomeProperties />
+    </>
+  );
+};
+
+export default HomePage;

@@ -10,7 +10,7 @@ const savedPropertiesPage = async () => {
   const sessionUser = await getSessionUser();
   const { userId } = sessionUser;
 
-  const user = await User.findById(userId).populate("bookmarks");
+  const user = await User.findById(userId).populate("bookmarks").lean();
   const { bookmarks } = user;
 
   return (

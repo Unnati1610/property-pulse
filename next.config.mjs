@@ -3,6 +3,11 @@
 //2nd is to add images from cloudinary inour website
 //we need to do this configuration to give access to use these domains
 const nextConfig = {
+    productionBrowserSourceMaps: true, // enable source maps
+    reactStrictMode: true,
+    experimental: {
+        serverActions: true,
+    },
     images: {
         remotePatterns: [
             {

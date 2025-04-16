@@ -1,5 +1,3 @@
-"use server";
-
 import User from "@/models/User";
 import PropertyCard from "@/components/PropertyCard";
 import { getSessionUser } from "@/utils/getSessionUser";
@@ -8,6 +6,10 @@ import connectDB from "@/config/database";
 const savedPropertiesPage = async () => {
   await connectDB();
   const sessionUser = await getSessionUser();
+
+  if (!sessionUser || !sessionUser.userId) {
+    throw new Error("ID is required");
+  }
   const { userId } = sessionUser;
 
   const user = await User.findById(userId).populate("bookmarks").lean();

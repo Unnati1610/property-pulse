@@ -24,10 +24,11 @@ const PropertyCard = ({ property }) => {
         <Image
           src={property.images[0]}
           alt=""
-          width="0"
-          height="0"
+          width={0}
+          height={0}
           sizes="100vw"
           className="w-full h-auto rounded-t-xl"
+          priority={true}
         />
       </Link>
       <div className="p-4">

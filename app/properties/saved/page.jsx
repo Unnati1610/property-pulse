@@ -5,6 +5,7 @@ import { getSessionUser } from "@/utils/getSessionUser";
 
 const savedPropertiesPage = async () => {
   await connectDB();
+  await import("@/models/Property");
   const sessionUser = await getSessionUser();
 
   if (!sessionUser || !sessionUser.userId) {

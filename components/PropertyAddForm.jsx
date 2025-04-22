@@ -1,4 +1,5 @@
 import addProperty from "@/app/actions/addProperty";
+import LocationForm from "./LocationForm";
 
 const PropertyAddForm = () => {
   return (
@@ -55,28 +56,13 @@ const PropertyAddForm = () => {
 
       <div className="mb-4 bg-blue-50 p-4">
         <label className="block text-gray-700 font-bold mb-2">Location</label>
+        <LocationForm />
         <input
           type="text"
           id="street"
           name="location.street"
           className="border rounded w-full py-2 px-3 mb-2"
           placeholder="Street"
-        />
-        <input
-          type="text"
-          id="city"
-          name="location.city"
-          className="border rounded w-full py-2 px-3 mb-2"
-          placeholder="City"
-          required
-        />
-        <input
-          type="text"
-          id="state"
-          name="location.state"
-          className="border rounded w-full py-2 px-3 mb-2"
-          placeholder="State"
-          required
         />
         <input
           type="text"

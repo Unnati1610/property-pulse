@@ -16,8 +16,8 @@ const PropertyDetails = ({ property }) => {
         <div className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
           <FaMapMarker className="text-orange-700 mt-1 mr-1" />
           <p className="text-orange-700">
-            {property.location.street},{property.location.city}{" "}
-            {property.location.zipcode}
+            {property.location.street},{property.location.city},
+            {property.location.state} {property.location.zipcode}
           </p>
         </div>
 
@@ -29,7 +29,7 @@ const PropertyDetails = ({ property }) => {
             <div className="text-gray-500 mr-2 font-bold">Nightly</div>
             <div className="text-2xl font-bold text-blue-500">
               {property.rates.nightly ? (
-                `$${property.rates.nightly.toLocaleString()}`
+                `Rs.${property.rates.nightly.toLocaleString()}`
               ) : (
                 <FaTimes className="text-red-700" />
               )}
@@ -39,7 +39,7 @@ const PropertyDetails = ({ property }) => {
             <div className="text-gray-500 mr-2 font-bold">Weekly</div>
             <div className="text-2xl font-bold text-blue-500">
               {property.rates.weekly ? (
-                `$${property.rates.weekly.toLocaleString()}`
+                `Rs.${property.rates.weekly.toLocaleString()}`
               ) : (
                 <FaTimes className="text-red-700" />
               )}
@@ -49,7 +49,7 @@ const PropertyDetails = ({ property }) => {
             <div className="text-gray-500 mr-2 font-bold">Monthly</div>
             <div className="text-2xl font-bold text-blue-500">
               {property.rates.monthly ? (
-                `$${property.rates.monthly.toLocaleString()}`
+                `Rs.${property.rates.monthly.toLocaleString()}`
               ) : (
                 <FaTimes className="text-red-700" />
               )}

@@ -37,11 +37,11 @@ const PropertyDeatilsPage = async ({ params }) => {
       </section>
       <section className="bg-blue-50">
         <div className="container m-auto py-10 px-6">
-          <div className="flex w-full gap-6">
-            <div className="w-[70%]">
+          <div className="flex flex-col lg:flex-row w-full gap-6">
+            <div className="w-full lg:w-[70%]">
               <PropertyDetails property={property} />
             </div>
-            <aside className="w-[30%] space-y-4">
+            <aside className="w-full lg:w-[30%] space-y-4">
               <BookmarkButton property={property} />
               <ShareButtons property={property} />
               <PropertyContactForm property={property} />
